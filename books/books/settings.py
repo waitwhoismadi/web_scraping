@@ -88,5 +88,8 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 # ...
 
+LOG_LEVEL = "WARNING"
+LOG_FILE = "book_scraper.log"
+
 MONGO_URI = "mongodb://localhost:27017"
 MONGO_DATABASE = "books_db"
