@@ -11,7 +11,7 @@ class BookSpider(scrapy.Spider):
             item = BooksItem()
             item["url"] = book.css("h3 > a::attr(href)").get()
             item["title"] = book.css("h3 > a::attr(title)").get()
-            item["price"] = book.css(".price_color.text").get()
+            item["price"] = book.css(".price_color::text").get()
             yield item
         
         next_page = response.css("li.next > a::attr(href)").get()
